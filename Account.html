@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account-Dml Store</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"href="https://stackpath.bootstrapcndcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	
+	<div class="container">
+	
+	<div class="navbar">
+		<div class="logo">
+			<a href="homepage.html"><img src="images/logo.jpg"height="75px"></a>		
+		</div>
+		<nav>
+			<ul id="MenuItems">
+				<li><a href="homepage.html">Home</a></li>
+				<li><a href="product.html">Products</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="account.html">Account</a></li>			
+			</ul>
+		</nav>
+		<img src="images/cart.png"width="30px"height="30px">
+		<img src="images/menu.png"class="menu-icon"onclick="menutoggle()">
+	</div>
+	</div>
+<!--------------account-page------------>
+
+<<div class="accountpage">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="images/Clarks.jpg"width="100%">
+			</div>
+			<div class="col-2">
+				<div id="formcontainer">
+        <div id="sub_login">
+            <h5 id="log_head">LogIn</h5><hr>
+            <span><?PHP echo $error;?></span>
+            <form action="checklogin.php" method="post">        
+                <input type="text" name="username" placeholder="USERNAME">
+                <span><?PHP echo $fields_error;?></span><br>
+                <input type="password" name="password" placeholder="PASSWORD">
+                <span><?PHP echo $fields_error1;?></span><br><br>
+                <input id="log_submit" type="submit" name="submit" Value="LogIn">
+                <a href=""class=btn>Forgot Password</a>
+            </form>
+        </div>
+    </div>
+<!-------------gap------------->
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-------footer--------->
+<div class="footer">
+  <div class="container">
+  	<div class="row">
+  		<div class="footer-col-1">
+  			<h3>Download Our App</h3>
+  			<p>Download App for Anroid and ios mobile phone.</p>
+  			<div class="app-logo">
+  				<img src="images/google.png">
+  				<img src="images/apple.png">
+  			</div>
+  		</div>
+  		<div class="footer-col-2">
+  			<img src="images/logo.jpg">
+  			<p>Our goal is to make your shopping experience convinient and effortless </p>
+  		</div>
+  		<div class="footer-col-3">
+  			<h3>Useful Links</h3>
+  			<ul>
+  				<li>Coupons</li>
+  				<li>Blog Post</li>
+  				<li>Return Policy</li>
+  				<li>Join Affliate</li>
+  			</ul>
+  		</div>
+  		<div class="footer-col-4">
+  			<h3>Follow Us</h3>
+  			<ul>
+  				<li>Facebook</li>
+  				<li>Twitter</li>
+  				<li>Instagram</li>
+  				<li>Youtube</li>
+  			</ul>
+  		</div>
+  	</div>
+  	<hr>
+  	<p class="Copyright">Copyright 2021-Dml Store</p>
+  </div>	
+</div>
+
+<!----------------js for toggle menu--------->
+<script >
+	var MenuItems=document.getElementById("MenuItems");
+
+	MenuItems.style.maxHeight="0px";
+
+	function menutoggle(){
+		if(MenuItems.style.maxHeight=="0px")
+		{
+			MenuItems.style.maxHeight="200px";
+		}
+		else
+		{
+			MenuItems.style.maxHeight="0px";
+		}
+	}
+</script>
+
+<!--------js for toggle form---->
+<script >
+	
+	var LoginForm=document.getElementById("LoginForm");
+	var RegForm=document.getElementById("RegForm");
+	var Indicator=document.getElementById("Indicator");
+      
+      function register(){
+      	RegForm.style.transform="translateX(0px)";
+      	LoginForm.style.transform="translateX(0px)";
+      	Indicator.style.transform="translateX(100px)";
+      }
+      function login(){
+      	RegForm.style.transform="translateX(300px)";
+      	LoginForm.style.transform="translateX(300px)";
+      	Indicator.style.transform="translateX(0px)";
+      }
+
+</script>
+</body>
+</html>
